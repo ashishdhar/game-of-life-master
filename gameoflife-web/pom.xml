@@ -4,6 +4,7 @@
 	<parent>
 		<artifactId>gameoflife</artifactId>
 		<groupId>com.wakaleo.gameoflife</groupId>
+<<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
 <<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
 <<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
 <<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
@@ -21,6 +22,9 @@
 =======
 		<version>0.7.37</version>
 >>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
+=======
+		<version>0.7.38-SNAPSHOT</version>
+>>>>>>> [maven-release-plugin] prepare for next development iteration
 	</parent>
 	<groupId>com.wakaleo.gameoflife</groupId>
 	<artifactId>gameoflife-web</artifactId>
@@ -248,6 +252,7 @@
 		<dependency>
 			<groupId>com.wakaleo.gameoflife</groupId>
 			<artifactId>gameoflife-core</artifactId>
+<<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
 <<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
 <<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
 <<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
@@ -265,6 +270,9 @@
 =======
 			<version>0.7.37</version>
 >>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
+=======
+			<version>0.7.38-SNAPSHOT</version>
+>>>>>>> [maven-release-plugin] prepare for next development iteration
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -279,6 +287,7 @@
 		<dependency>
 			<groupId>com.wakaleo.gameoflife</groupId>
 			<artifactId>gameoflife-webservice</artifactId>
+<<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
 <<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
 <<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
 <<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
@@ -296,6 +305,9 @@
 =======
 			<version>0.7.37</version>
 >>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
+=======
+			<version>0.7.38-SNAPSHOT</version>
+>>>>>>> [maven-release-plugin] prepare for next development iteration
 		</dependency>
 		<dependency>
 			<groupId>org.easyb</groupId>
