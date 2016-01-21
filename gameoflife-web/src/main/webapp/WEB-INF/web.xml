@@ -4,7 +4,11 @@
               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
+<<<<<<< HEAD
          
+=======
+
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     <display-name>Game of Life Web Application</display-name>
 
     <servlet>

@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'code-quality'
 
 repositories {
+<<<<<<< HEAD
   mavenCentral() 
 }
 
@@ -10,6 +11,16 @@ dependencies {
     [group: 'junit', name: 'junit', version: '4.8.1'],
     [group: 'org.hamcrest', name: 'hamcrest-all', version: '1.1']
   )
+=======
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.8.1'],
+            [group: 'org.hamcrest', name: 'hamcrest-all', version: '1.1']
+    )
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
 }
 
 configurations {
@@ -24,6 +35,7 @@ dependencies {
 task pmd << {
     println 'Running PMD static code analysis'
     ant {
+<<<<<<< HEAD
         taskdef(name:'pmd', classname:'net.sourceforge.pmd.ant.PMDTask', 
                 classpath: configurations.pmd.asPath)
 
@@ -33,6 +45,17 @@ task pmd << {
         pmd(shortFilenames:'true', failonruleviolation:'false', 
             rulesetfiles:'conf/pmd-rules.xml') {
             formatter(type:'xml', toFile:'build/pmd.xml')
+=======
+        taskdef(name: 'pmd', classname: 'net.sourceforge.pmd.ant.PMDTask',
+                classpath: configurations.pmd.asPath)
+
+        taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask',
+                classpath: configurations.pmd.asPath)
+
+        pmd(shortFilenames: 'true', failonruleviolation: 'false',
+                rulesetfiles: 'conf/pmd-rules.xml') {
+            formatter(type: 'xml', toFile: 'build/pmd.xml')
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
             fileset(dir: "src/main/java") {
                 include(name: '**/*.java')
             }
@@ -41,15 +64,25 @@ task pmd << {
             }
         }
 
+<<<<<<< HEAD
         cpd(minimumTokenCount:'50', format: 'xml',
             ignoreIdentifiers: 'true',
             outputFile:'build/cpd.xml') {
+=======
+        cpd(minimumTokenCount: '50', format: 'xml',
+                ignoreIdentifiers: 'true',
+                outputFile: 'build/cpd.xml') {
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
             fileset(dir: "src/main/java") {
                 include(name: '**/*.java')
             }
             fileset(dir: "src/test/java") {
                 include(name: '**/*.java')
+<<<<<<< HEAD
             }        
+=======
+            }
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
         }
     }
 }

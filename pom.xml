@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wakaleo.gameoflife</groupId>
     <artifactId>gameoflife</artifactId>
     <version>0.7.49</version>
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wakaleo.gameoflife</groupId>
+    <artifactId>gameoflife</artifactId>
+    <version>1.0-SNAPSHOT</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     <packaging>pom</packaging>
     <name>gameoflife</name>
     <url>https://github.com/wakaleo/game-of-life</url>
     <properties>
+<<<<<<< HEAD
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <easyb.version>1.4</easyb.version>
         <cobertura.version>2.4</cobertura.version>
@@ -16,6 +25,19 @@
         <targetJdk>1.6</targetJdk>
         <github.account>wakaleo</github.account>
         <thucydides.version>0.7.11</thucydides.version>
+=======
+        <build.number>SNAPSHOT</build.number>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <easyb.version>1.4</easyb.version>
+        <cobertura.version>2.6</cobertura.version>
+        <!-- A workaround for a bug in PMD -->
+        <sourceJdk>1.7</sourceJdk>
+        <targetJdk>1.7</targetJdk>
+        <github.account>wakaleo</github.account>
+        <thucydides.version>0.9.268</thucydides.version>
+        <jelastic.context>gameoflife</jelastic.context>
+        <jelastic.environment>wakaleo</jelastic.environment>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     </properties>
 
     <scm>
@@ -26,6 +48,7 @@
     <build>
         <plugins>
             <plugin>
+<<<<<<< HEAD
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
@@ -83,10 +106,85 @@
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.2</version>
+=======
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.11</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>unit-tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <skip>false</skip>
+                            <includes>
+                                <include>**/When*.java</include>
+                                <include>**/*Test.java</include>
+                            </includes>
+                            <excludes>
+                                <exclude>%regex[.*integration.*]</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>integration-tests</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <skip>false</skip>
+                            <includes>
+                                <include>%regex[.*integration.*]</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- CODE COVERAGE -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.2.201409121644</version>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                 <configuration>
                     <preparationGoals>clean install</preparationGoals>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.7</version>
@@ -105,6 +203,14 @@
                     <xmlOutput>true</xmlOutput>
                 </configuration>
             </plugin>
+=======
+
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
             <plugin>
                 <groupId>org.easyb</groupId>
                 <artifactId>maven-easyb-plugin</artifactId>
@@ -123,7 +229,26 @@
                     <jvmArguments>-Xmx512m -Dwebdriver.driver=${webdriver.driver}</jvmArguments>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
         </plugins>
+=======
+
+            <plugin>
+                <groupId>com.jelastic</groupId>
+                <artifactId>jelastic-maven-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <email>${jelastic.username}</email>
+                    <password>${jelastic.password}</password>
+                    <context>${jelastic.context}</context>
+                    <environment>${jelastic.environment}</environment>
+                    <api_hoster>app.jelastic.servint.net</api_hoster>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -138,7 +263,11 @@
                         </execution>
                     </executions>
                     <configuration>
+<<<<<<< HEAD
                         <storyType>html</storyType>
+=======
+                        <storyType>html</storyType>                         l
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         <storyReport>${basedir}/target/easyb/easyb-report.html
                         </storyReport>
                     </configuration>
@@ -146,6 +275,7 @@
 
             </plugins>
         </pluginManagement>
+<<<<<<< HEAD
     <extensions> 
          <extension> 
             <groupId>org.apache.maven.wagon</groupId>
@@ -153,6 +283,15 @@
             <version>2.2</version>
          </extension> 
      </extensions> 
+=======
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     </build>
     <dependencyManagement>
         <dependencies>
@@ -168,8 +307,18 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+<<<<<<< HEAD
             <version>4.8.2</version>
             <type>jar</type>
+=======
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.1</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -179,10 +328,15 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     <modules>
         <module>gameoflife-build</module>
         <module>gameoflife-core</module>
         <module>gameoflife-web</module>
+<<<<<<< HEAD
         <module>gameoflife-webservice</module>
         <module>gameoflife-cli</module>
         <module>gameoflife-webtests</module>
@@ -211,6 +365,61 @@
                                 <format>html</format>
                                 <format>xml</format>
                             </formats>
+=======
+    </modules>
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+        </profile>
+        <profile>
+            <id>metrics</id>
+            <build>
+                <plugins>
+                    <!-- CHECKSTYLE -->
+                    <!--<plugin>-->
+                        <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+                        <!--<version>2.9.1</version>-->
+                        <!--<dependencies>-->
+                            <!--<dependency>-->
+                                <!--<groupId>com.wakaleo.gameoflife</groupId>-->
+                                <!--<artifactId>gameoflife-build</artifactId>-->
+                                <!--<version>${project.version}</version>-->
+                            <!--</dependency>-->
+                        <!--</dependencies>-->
+                        <!--<configuration>-->
+                            <!--<configLocation>custom-checkstyle.xml</configLocation>-->
+                        <!--</configuration>-->
+                    <!--</plugin>-->
+
+                    <!-- PMD -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>3.2</version>
+                        <configuration>
+                            <targetJdk>1.6</targetJdk>
+                            <aggregate>true</aggregate>
+                            <format>xml</format>
+                            <!-- CPD options -->
+                            <minimumTokens>20</minimumTokens>
+                            <!--<ignoreIdentifiers>true</ignoreIdentifiers>-->
+                            <failOnViolation>true</failOnViolation>
+                            <failurePriority>2</failurePriority>
+                        </configuration>
+                    </plugin>
+
+                    <!-- FINDBUGS -->
+                    <plugin>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <version>2.4.0</version>
+                        <configuration>
+                            <effort>Max</effort>
+                            <xmlOutput>true</xmlOutput>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         </configuration>
                     </plugin>
                 </plugins>
@@ -218,6 +427,12 @@
         </profile>
         <profile>
             <id>maven3</id>
+<<<<<<< HEAD
+=======
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
             <build>
                 <plugins>
                     <plugin>
@@ -243,11 +458,16 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-site-plugin</artifactId>
+<<<<<<< HEAD
                         <version>3.0</version>
+=======
+                        <version>3.3</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         <configuration>
                             <reportPlugins>
                                 <plugin>
                                     <artifactId>maven-project-info-reports-plugin</artifactId>
+<<<<<<< HEAD
                                     <version>2.2</version>
                                 </plugin>
                                 <plugin>
@@ -265,19 +485,38 @@
                                             <format>xml</format>
                                         </formats>
                                     </configuration>
+=======
+                                    <version>2.7</version>
+                                </plugin>
+                                <plugin>
+                                    <groupId>org.jacoco</groupId>
+                                    <artifactId>jacoco-maven-plugin</artifactId>
+                                    <version>0.7.2.201409121644</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                                 </plugin>
                                 <plugin>
                                     <groupId>org.apache.maven.plugins</groupId>
                                     <artifactId>maven-checkstyle-plugin</artifactId>
+<<<<<<< HEAD
                                     <version>2.6</version>
                                     <configuration>
                                         <configLocation>checkstyle.xml</configLocation>
                                     </configuration>
+=======
+                                    <version>3.0.1</version>
+                                    <!--<configuration>-->
+                                    <!--<configLocation>gol-checkstyle.xml</configLocation>-->
+                                    <!--</configuration>-->
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                                 </plugin>
                                 <plugin>
                                     <groupId>org.apache.maven.plugins</groupId>
                                     <artifactId>maven-pmd-plugin</artifactId>
+<<<<<<< HEAD
                                     <version>2.5</version>
+=======
+                                    <version>3.2</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                                     <configuration>
                                         <targetJdk>1.6</targetJdk>
                                         <aggregate>true</aggregate>
@@ -293,12 +532,44 @@
                                 <plugin>
                                     <groupId>org.codehaus.mojo</groupId>
                                     <artifactId>findbugs-maven-plugin</artifactId>
+<<<<<<< HEAD
                                     <version>2.3.2</version>
+=======
+                                    <version>2.4.0</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                                     <configuration>
                                         <effort>Max</effort>
                                         <xmlOutput>true</xmlOutput>
                                     </configuration>
                                 </plugin>
+<<<<<<< HEAD
+=======
+                                <plugin>
+                                    <artifactId>maven-javadoc-plugin</artifactId>
+                                    <version>2.9.1</version>
+                                    <configuration>
+                                        <source>1.6</source>
+                                        <doclet>
+                                            gr.spinellis.umlgraph.doclet.UmlGraphDoc
+                                        </doclet>
+                                        <docletArtifact>
+                                            <groupId>gr.spinellis</groupId>
+                                            <artifactId>UmlGraph</artifactId>
+                                            <version>4.6</version>
+                                        </docletArtifact>
+                                        <additionalparam>
+                                            -inferrel -inferdep -hide java.* -collpackages
+                                            java.util.* -attributes -operations
+                                            -enumerations -enumconstants
+                                        </additionalparam>
+                                    </configuration>
+                                </plugin>
+                                <plugin>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-jxr-plugin</artifactId>
+                                    <version>2.4</version>
+                                </plugin>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                             </reportPlugins>
                         </configuration>
                         <dependencies>
@@ -377,21 +648,35 @@
                             <!-- CPD options -->
                             <minimumTokens>20</minimumTokens>
                             <ignoreIdentifiers>true</ignoreIdentifiers>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
+<<<<<<< HEAD
                         <version>2.6</version>
                         <configuration>
                             <configLocation>gameoflife-build/checkstyle.xml
                             </configLocation>
+=======
+                        <version>2.9.1</version>
+                        <configuration>
+                            <configLocation>gameoflife-build/checkstyle.xml</configLocation>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>findbugs-maven-plugin</artifactId>
+<<<<<<< HEAD
                         <version>2.3</version>
+=======
+                        <version>2.4.0</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                         <configuration>
                             <effort>Max</effort>
                             <xmlOutput>true</xmlOutput>
