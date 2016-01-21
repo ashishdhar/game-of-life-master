@@ -4,76 +4,12 @@
   <parent>
     <artifactId>gameoflife</artifactId>
     <groupId>com.wakaleo.gameoflife</groupId>
-<<<<<<< c8ad631f1f011aec35c964408aa5649508d6cd9f
-<<<<<<< f46ac3ccd70db19d8fca628ede64c61ebb9ada6d
-<<<<<<< 6eef68daa6a4eac48de97d826a5120247049ddad
-<<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
-<<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
-<<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
-<<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
-<<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
-    <version>0.7.35-SNAPSHOT</version>
-=======
-    <version>0.7.36-SNAPSHOT</version>
->>>>>>> Updated version
-=======
-    <version>0.7.36</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.36-SNAPSHOT
-=======
-    <version>0.7.37-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.37</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
-=======
-    <version>0.7.38-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.38</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.38-SNAPSHOT
-=======
-    <version>0.7.39-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.41</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.41-SNAPSHOT
+    <version>0.7.42-SNAPSHOT</version>
   </parent>
   <groupId>com.wakaleo.gameoflife</groupId>
   <artifactId>gameoflife-core</artifactId>
   <packaging>jar</packaging>
-<<<<<<< c8ad631f1f011aec35c964408aa5649508d6cd9f
-<<<<<<< f46ac3ccd70db19d8fca628ede64c61ebb9ada6d
-<<<<<<< 6eef68daa6a4eac48de97d826a5120247049ddad
-<<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
-<<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
-<<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
-<<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
-<<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
-  <version>0.7.35-SNAPSHOT</version>
-=======
-  <version>0.7.36-SNAPSHOT</version>
->>>>>>> Updated version
-=======
-  <version>0.7.36</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.36-SNAPSHOT
-=======
-  <version>0.7.37-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-  <version>0.7.37</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
-=======
-  <version>0.7.38-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-  <version>0.7.38</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.38-SNAPSHOT
-=======
-  <version>0.7.39-SNAPSHOT</version>
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-  <version>0.7.41</version>
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.41-SNAPSHOT
+  <version>0.7.42-SNAPSHOT</version>
   <name>gameoflife-core</name>
   <url>${HUDSON_URL}</url>
   <build>
