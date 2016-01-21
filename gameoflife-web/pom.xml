@@ -4,7 +4,11 @@
     <parent>
         <artifactId>gameoflife</artifactId>
         <groupId>com.wakaleo.gameoflife</groupId>
+<<<<<<< HEAD
         <version>0.7.49</version>
+=======
+        <version>1.0-SNAPSHOT</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     </parent>
     <groupId>com.wakaleo.gameoflife</groupId>
     <artifactId>gameoflife-web</artifactId>
@@ -26,10 +30,13 @@
         </resources>
         <plugins>
             <plugin>
+<<<<<<< HEAD
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.9</version>
             </plugin>
             <plugin>
+=======
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>7.1.0.v20100505</version>
@@ -61,6 +68,23 @@
                     </archive>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
+=======
+            <plugin>
+                <groupId>net.thucydides.maven.plugins</groupId>
+                <artifactId>maven-thucydides-plugin</artifactId>
+                <version>${thucydides.version}</version>
+                <executions>
+                    <execution>
+                        <id>thucydides-reports</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
         </plugins>
     </build>
     <profiles>
@@ -111,12 +135,16 @@
         <dependency>
             <groupId>com.wakaleo.gameoflife</groupId>
             <artifactId>gameoflife-core</artifactId>
+<<<<<<< HEAD
             <version>0.7.49</version>
         </dependency>
         <dependency>
             <groupId>com.wakaleo.gameoflife</groupId>
             <artifactId>gameoflife-webservice</artifactId>
             <version>0.7.49</version>
+=======
+            <version>1.0-SNAPSHOT</version>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

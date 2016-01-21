@@ -12,6 +12,7 @@ import static org.mockito.Mockito.mock;
 
 public class WhenSpawningANewGeneration {
 
+<<<<<<< HEAD
 	@Test
 	public void whenGeneratingTheNextGenerationAnUpdatedUniverseShouldBeProduced() {
 		HttpServletRequest request = mock(HttpServletRequest.class);
@@ -29,5 +30,24 @@ public class WhenSpawningANewGeneration {
 		ModelAndView homeView = controller.index();
 		assertThat(homeView.getViewName(), is("home"));
 	}
+=======
+    @Test
+    public void whenGeneratingTheNextGenerationAnUpdatedUniverseShouldBeProduced() {
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        request.setAttribute("rows", "3");
+        request.setAttribute("columns", "3");
+        GameController controller = new GameController();
+        ModelAndView nextView = controller.nextGeneration(3, 3, request);
+
+        assertThat(nextView.getModel().get("universe"), is(not(nullValue())));
+    }
+
+    @Test
+    public void theIndexUrlShouldDisplayTheHomePage() {
+        HomePageController controller = new HomePageController();
+        ModelAndView homeView = controller.index();
+        assertThat(homeView.getViewName(), is("home"));
+    }
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
 }	
 

@@ -18,6 +18,7 @@
    limitations under the License.
 -->
 
+<<<<<<< HEAD
 	<!-- all users, uses round robin selection -->
 	<allthreads>
 	        <!-- unique parameters for each individual thread (ie user) -->
@@ -57,6 +58,47 @@
                         </parameter>
 		</thread>
 	</allthreads>
+=======
+<!-- all users, uses round robin selection -->
+<allthreads>
+    <!-- unique parameters for each individual thread (ie user) -->
+
+    <thread>
+        <parameter>
+            <paramname>username</paramname>
+            <paramvalue>dduck</paramvalue>
+        </parameter>
+        <parameter>
+            <paramname>password</paramname>
+            <paramvalue>quack</paramvalue>
+        </parameter>
+    </thread>
+    <thread>
+        <parameter>
+            <paramname>username</paramname>
+            <paramvalue>mmouse</paramvalue>
+        </parameter>
+        <parameter>
+            <paramname>password</paramname>
+            <paramvalue>squeak</paramvalue>
+        </parameter>
+    </thread>
+    <thread>
+        <parameter>
+            <paramname>username</paramname>
+            <paramvalue>bbunney</paramvalue>
+        </parameter>
+        <parameter>
+            <paramname>password</paramname>
+            <paramvalue>carrot</paramvalue>
+        </parameter>
+        <parameter>
+            <paramname>manager</paramname>
+            <paramvalue>yes</paramvalue>
+        </parameter>
+    </thread>
+</allthreads>
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
 
 
 

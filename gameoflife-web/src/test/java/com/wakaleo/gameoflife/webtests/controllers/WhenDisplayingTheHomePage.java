@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.*;
 
 public class WhenDisplayingTheHomePage {
 
+<<<<<<< HEAD
 	@Test
 	public void theHomeUrlShouldDisplayTheHomePage() {
 		HomePageController controller = new HomePageController();
@@ -22,5 +23,20 @@ public class WhenDisplayingTheHomePage {
 		ModelAndView homeView = controller.index();
 		assertThat(homeView.getViewName(), is("home"));
 	}
+=======
+    @Test
+    public void theHomeUrlShouldDisplayTheHomePage() {
+        HomePageController controller = new HomePageController();
+        ModelAndView homeView = controller.home();
+        assertThat(homeView.getViewName(), is("home"));
+    }
+
+    @Test
+    public void theIndexUrlShouldDisplayTheHomePage() {
+        HomePageController controller = new HomePageController();
+        ModelAndView homeView = controller.index();
+        assertThat(homeView.getViewName(), is("home"));
+    }
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
 }	
 

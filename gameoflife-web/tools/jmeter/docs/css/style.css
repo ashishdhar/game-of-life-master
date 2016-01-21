@@ -15,8 +15,13 @@
    limitations under the License.
 */
 
+<<<<<<< HEAD
 a[name]:hover:after{
 /*Shows the value of the name attribute when hovered*/
+=======
+a[name]:hover:after {
+    /*Shows the value of the name attribute when hovered*/
+>>>>>>> 18051323061c9d96d348a71113bde562441a0ca8
     content: " #" attr(name);
     font-size: 90%;
     text-decoration: none;
