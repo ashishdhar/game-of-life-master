@@ -160,6 +160,7 @@
 		<module>gameoflife-webservice</module>
 		<module>gameoflife-cli</module>
 	</modules>
+<<<<<<< 00b355f6c53ef88fd9bccadc62aad469ef81e0cb
 	<profiles>
 		<profile>
 			<id>nexus</id>
@@ -330,6 +331,8 @@
         <module>gameoflife-webservice</module>
         <module>gameoflife-cli</module>
     </modules>
+=======
+>>>>>>> Fixed badly merged pom
     <distributionManagement>
         <repository>
             <id>releases</id>
