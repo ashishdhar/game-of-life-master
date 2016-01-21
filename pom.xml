@@ -3,34 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wakaleo.gameoflife</groupId>
     <artifactId>gameoflife</artifactId>
-    <version>0.7.35-SNAPSHOT</version>
-=======
-    <version>0.7.36-SNAPSHOT</version>
->>>>>>> Updated version
-=======
-    <version>0.7.36</version> 
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.36-SNAPSHOT
-=======
-    <version>0.7.37-SNAPSHOT</version> 
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.37</version> 
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.37-SNAPSHOT
-=======
-    <version>0.7.38-SNAPSHOT</version> 
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.38</version> 
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.38-SNAPSHOT
-=======
-    <version>0.7.39-SNAPSHOT</version> 
->>>>>>> [maven-release-plugin] prepare for next development iteration
-=======
-    <version>0.7.41</version> 
->>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.41-SNAPSHOT
-=======
-    <version>0.7.42-SNAPSHOT</version> 
->>>>>>> [maven-release-plugin] prepare for next development iteration
+    <version>0.7.42</version> 
     <packaging>pom</packaging>
     <name>gameoflife</name>                  
     <url>https://github.com/wakaleo/game-of-life</url>
@@ -48,15 +21,8 @@
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
         <url>scm:git:git@github.com:${github.account}/game-of-life.git</url>
-    </scm>
-<<<<<<< cd2443f3ba29bdddef6e74432839ed6d3fd1f55f
-
-<<<<<<< 37bb388500b76eab807793d1fd7870cfa5f57544
-	<build>
-=======
-                   
+    </scm>               
     <build>
->>>>>>> Formatting changes
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -111,11 +77,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-<<<<<<< 8280d809f668d70a3868261e280104993533e7d4
 				<version>2.2</version>
-=======
-				<version>2.1</version>
->>>>>>> Updating release plugin
 				<configuration>
 					<preparationGoals>clean install</preparationGoals>
 				</configuration>
@@ -189,7 +151,6 @@
 		<module>gameoflife-webservice</module>
 		<module>gameoflife-cli</module>
 	</modules>
-<<<<<<< 00b355f6c53ef88fd9bccadc62aad469ef81e0cb
 	<profiles>
 		<profile>
 			<id>nexus</id>
