@@ -4,6 +4,7 @@
   <parent>
     <artifactId>gameoflife</artifactId>
     <groupId>com.wakaleo.gameoflife</groupId>
+<<<<<<< 6eef68daa6a4eac48de97d826a5120247049ddad
 <<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
 <<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
 <<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
@@ -25,10 +26,14 @@
 =======
     <version>0.7.38-SNAPSHOT</version>
 >>>>>>> [maven-release-plugin] prepare for next development iteration
+=======
+    <version>0.7.38</version>
+>>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.38-SNAPSHOT
   </parent>
   <groupId>com.wakaleo.gameoflife</groupId>
   <artifactId>gameoflife-core</artifactId>
   <packaging>jar</packaging>
+<<<<<<< 6eef68daa6a4eac48de97d826a5120247049ddad
 <<<<<<< 62f027723c371227c5276ffa98f623fe16cfa251
 <<<<<<< 94bd6303dd06a08250037611811aa9aca9ce73f6
 <<<<<<< a3f7b8721b729b1b35fc6eb8cd98c9faf44e4c18
@@ -50,6 +55,9 @@
 =======
   <version>0.7.38-SNAPSHOT</version>
 >>>>>>> [maven-release-plugin] prepare for next development iteration
+=======
+  <version>0.7.38</version>
+>>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.38-SNAPSHOT
   <name>gameoflife-core</name>
   <url>${HUDSON_URL}</url>
   <build>
