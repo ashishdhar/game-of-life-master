@@ -9,12 +9,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 tags "acceptance"
 
 before_each "Configure test URL", {
-<<<<<<< d8226e444577d94bcc9115c17480db1e618edb0c
-	webtest_home = System.properties.'webtest.home'
-    println "Testing against $webtest_home"
-=======
 	testServer = System.properties.'test.server'
->>>>>>> Updated version number
 }
 
 scenario "Application version number is displayed on the home page",{
