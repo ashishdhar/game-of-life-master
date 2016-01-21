@@ -4,7 +4,11 @@
 	<parent>
 		<artifactId>gameoflife</artifactId>
 		<groupId>com.wakaleo.gameoflife</groupId>
+<<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
 		<version>0.7.35-SNAPSHOT</version>
+=======
+		<version>0.7.36-SNAPSHOT</version>
+>>>>>>> Updated version
 	</parent>
 	<artifactId>gameoflife-cli</artifactId>
 	<packaging>jar</packaging>
@@ -20,7 +24,11 @@
 		<dependency>
 			<groupId>com.wakaleo.gameoflife</groupId>
 			<artifactId>gameoflife-core</artifactId>
+<<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
 			<version>0.7.35-SNAPSHOT</version>
+=======
+			<version>0.7.36-SNAPSHOT</version>
+>>>>>>> Updated version
 		</dependency>
 	</dependencies>
 </project>
