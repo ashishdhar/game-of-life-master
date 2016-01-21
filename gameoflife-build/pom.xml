@@ -13,10 +13,14 @@
   <groupId>com.wakaleo.gameoflife</groupId>
   <artifactId>gameoflife-build</artifactId>
   <packaging>jar</packaging>
+<<<<<<< d62ad25fe41200395eec4e085213554e77d00839
 <<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
   <version>0.7.35-SNAPSHOT</version>
 =======
   <version>0.7.36-SNAPSHOT</version>
 >>>>>>> Updated version
+=======
+  <version>0.7.36-SNAPSHOT</version>   
+>>>>>>> Updated versions
   <name>gameoflife-build</name>
 </project>
