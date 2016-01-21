@@ -462,7 +462,6 @@
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>maven2</id>
             <build>
