@@ -23,9 +23,14 @@
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
         <url>scm:git:git@github.com:${github.account}/game-of-life.git</url>
     </scm>
+<<<<<<< cd2443f3ba29bdddef6e74432839ed6d3fd1f55f
 
 <<<<<<< 37bb388500b76eab807793d1fd7870cfa5f57544
 	<build>
+=======
+                   
+    <build>
+>>>>>>> Formatting changes
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
