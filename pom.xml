@@ -98,7 +98,8 @@
 					<xmlOutput>true</xmlOutput>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>  
+		
 		<pluginManagement>
 			<plugins>
 				<plugin>
