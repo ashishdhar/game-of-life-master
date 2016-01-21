@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>org.easyb</groupId>
 				<artifactId>maven-easyb-plugin</artifactId> 
-				<version>1.2.1</version>
+				<version>${easyb.version}</version>
 				<executions>
 					<execution>
 						<phase>integration-test</phase>
@@ -93,7 +93,7 @@
 						</connector>
 					</connectors>
 					<stopKey>foo</stopKey>
-					<stopPort>9999</stopPort>
+					<stopPort>${jetty.stop.port}</stopPort>
 				</configuration>
 				<executions>
 					<execution>
@@ -176,7 +176,7 @@
 					<plugin>
 						<groupId>org.easyb</groupId>
 						<artifactId>maven-easyb-plugin</artifactId>
-						<version>1.2.1</version>
+						<version>${easyb.version}</version>
 						<executions>
 							<execution>
 								<phase>integration-test</phase>
@@ -266,5 +266,4 @@
 		<jetty.stop.port>9999</jetty.stop.port>
 		<webtest.home>http://localhost:${jetty.port}</webtest.home>
 	</properties>
-
 </project>
