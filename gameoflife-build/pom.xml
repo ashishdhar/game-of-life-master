@@ -4,15 +4,20 @@
   <parent>
     <artifactId>gameoflife</artifactId>
     <groupId>com.wakaleo.gameoflife</groupId>
+<<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
 <<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
     <version>0.7.35-SNAPSHOT</version>
 =======
     <version>0.7.36-SNAPSHOT</version>
 >>>>>>> Updated version
+=======
+    <version>0.7.36</version>
+>>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.36-SNAPSHOT
   </parent>
   <groupId>com.wakaleo.gameoflife</groupId>
   <artifactId>gameoflife-build</artifactId>
   <packaging>jar</packaging>
+<<<<<<< e6b021f71b52a622dfb6e4169cec60a18323bed6
 <<<<<<< d62ad25fe41200395eec4e085213554e77d00839
 <<<<<<< 5cd9cffc66b93c001314359c0968e8c93d54a2e5
   <version>0.7.35-SNAPSHOT</version>
@@ -22,5 +27,8 @@
 =======
   <version>0.7.36-SNAPSHOT</version>   
 >>>>>>> Updated versions
+=======
+  <version>0.7.36</version>   
+>>>>>>> [maven-release-plugin] prepare release gameoflife-0.7.36-SNAPSHOT
   <name>gameoflife-build</name>
 </project>
